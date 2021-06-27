@@ -17,7 +17,13 @@
         </div>
     </div>
 
-    <script>
+    <script> 
+        var sheepImg = [
+            'https://github.com/ham-get/JavaScript_practice-3-/blob/main/img01.jpg?raw=true',
+            'https://github.com/ham-get/JavaScript_practice-3-/blob/main/img02.jpg?raw=true',
+            'https://github.com/ham-get/JavaScript_practice-3-/blob/main/img03.jpg?raw=true'
+         ];
+        
         var ajax =new XMLHttpRequest();
         ajax.open('GET', 'https://h2o-space.com/htmlbook/images.php');
         ajax.responseType = 'json';
@@ -29,7 +35,7 @@
                     var data = this.response[i];
 
                     var img = document.createElement('img');
-                    img.setAttribute('src', data.path);
+                    img.setAttribute('src', sheepImg[i]);
 
                     var caption = document.createElement('div');
                     caption.className = 'inner';
